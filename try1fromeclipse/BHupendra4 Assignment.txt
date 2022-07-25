@@ -1,0 +1,164 @@
+Q2.
+public interface NRBBank {
+	
+	public  void interestRate();
+	public void Branch();
+
+}
+public interface NabilBank extends NRBBank {
+public void ownMethod();
+}
+
+	
+	public class NabilKTM  implements NabilBank{
+	public void interestRate() {
+		System.out.println("Interest rate is 9%");
+	}
+	
+	public void ownMethod(){}//NabilBank
+	public void Branch() {
+		System.out.println("This is ktm branch");
+		
+	}//NRB Bank
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+public class NabilPatan implements NabilBank{
+
+	public void interestRate() {
+		System.out.println("Interest rate is 11%");	
+	
+	}
+	public void ownMethod() {}
+	public void Branch() {
+		System.out.println("this is patan branch");
+		
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+public class NabilPKR implements NabilBank {
+
+	public void interestRate() {
+		
+		System.out.println("interest rate is 11%");
+	}
+	public void Branch() {
+		System.out.println("This is Pokhara Branch");
+	}
+	 
+	public void ownMethod() {}
+	public static void main(String[] args) {
+	
+	}
+	
+
+}
+
+public class BOK implements NRBBank {
+
+	public  void interestRate(){
+		System.out.println("interest rate is 10%");
+	
+	}
+	public void Branch(){
+		System.out.println("This is Bank of Kathmandu(BOK)");
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+public class testing {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//create a object related to class
+		NabilKTM p1 = new NabilKTM();
+        p1.interestRate();
+        p1.Branch();
+        
+		NabilPatan p2 =new NabilPatan();
+		p2.interestRate ();
+		p2.Branch();
+		
+		NabilPKR p3 =new NabilPKR();
+		p3.interestRate ();
+		p3.Branch();
+		
+		BOK p4 =new BOK();
+		p4.interestRate ();
+		p4.Branch();
+				
+
+		
+
+	}
+
+}
+
+
+
+
+
+Q1.
+package interface_Demo;
+
+public interface Shape {
+	
+public int Area(int l, int b);
+
+}
+package interface_Demo;
+
+public class CalcRectangle implements Shape {
+	
+	public int Area(int l, int b){
+		int AreaofRectangle = (l*b);
+		System.out.println(AreaofRectangle);
+		return 1 ;
+	}
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		CalcRectangle A1 = new CalcRectangle();
+		A1.Area(5, 4);
+		
+
+	}
+
+}
+package interface_Demo;
+
+public class CalofSquare {
+	
+	public int Area(int l) {
+		int AreaofSquare=(l*l);
+		System.out.println(AreaofSquare);
+		return 1;		
+	}
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		CalofSquare A2 = new CalofSquare();
+		A2.Area(5);
+		
+		
+
+	}
+
+}

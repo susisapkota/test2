@@ -1,0 +1,95 @@
+package Assignment4;
+//Abstract class
+public abstract class AbstractAnimal {
+	
+	public abstract void Sound(); // Abstract method (does not have a body{})
+	public abstract void Structure();
+	public abstract void Speed();
+	public abstract void Habitat();
+
+	public final void  reProduce() {
+		System.out.println("Give birth to their kids");
+	}
+	public final void breath()  {
+		System.out.println("Animal was gasping for breath");
+	}
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+package Assignment4;
+
+
+public class Human extends AbstractAnimal {
+	public  void Sound() {
+		System.out.println("Some people can speak animal sound");}
+	
+	public  void Structure() {
+		System.out.println("Animal and human structures are near same");}
+	
+	public  void Speed() {
+		System.out.println("most mammals can sprint faster then humans");}
+	
+	public  void Habitat() {
+		System.out.println("Habitat contains all an animall needs to survive");
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+package Assignment4;
+
+public class Dog {
+	public  void Sound() {
+		System.out.println("Dog can't speak animal sound");}
+	
+	public  void Structure() {
+		System.out.println("Dog and human structures are not same");}
+	
+	public  void Speed() {
+		System.out.println("Dog can sprint faster then humans");}
+	
+	public  void Habitat() {
+		System.out.println("Habitat contains all an Dog needs to survive");
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+package Assignment4;
+
+//Main class
+public class testing {
+
+	public static void main(String[] args) {
+		// creating object
+		Human h1 = new Human();
+		h1.Sound();
+		h1.Habitat();
+		h1.Speed();
+		h1.Structure();
+		
+		Dog d1 = new Dog();
+		d1.Sound();
+		d1.Habitat();
+		d1.Speed();
+		d1.Structure();
+		
+		Tiger t1 = new Tiger();
+		t1.Sound();
+		t1.Habitat();
+		t1.Speed();
+		t1.Structure();
+	}
+
+}

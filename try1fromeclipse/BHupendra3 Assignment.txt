@@ -1,0 +1,90 @@
+Q1.
+
+public class Student {
+	String stname;
+	int stage;
+	int strollno;
+	String stsem;
+	String stdep;
+	//creating constructor 
+public Student(String stname,int stage,int strollno,String stsem,String stdep) {
+	System.out.print("Student name:"+stname+"\r\n"+"Student age:"+stage
+			+"\r\n"+"Student Roll No:"+ strollno +"\r\n"+"Student stem:"
+			+stsem+"\r\n"+ "Student Dept:"+stdep);
+}
+
+
+	public static void main(String[] args) {
+		Student s1 = new Student ("Rahul Acharya", 19, 512,"3rd semester","comput");
+		//s1.stname = "Rahul Acharya";
+		//s1.stage = 19;
+		//s1.strollno = 512;
+	    //s1.stsem = "3rd semester";
+		//s1.stdep = "comput";
+			
+			
+    	  
+      
+      
+	}
+
+}
+
+Q2.
+
+package Inheritance Character;
+
+public class Mammal {
+	// Method
+public  void giveBirth() {
+	System.out.print("Mammals gives live birth  to  their own babies.");
+	
+}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+       Mammal m1 = new Mammal();
+       m1.giveBirth();
+       //giveBirth();
+
+	}
+
+}
+ // Second Class
+package InheritanceCharacter;
+
+public class Animal extends Mammal {
+	//method
+	public void takecare() {
+		System.out.println("Human take care for most of the  domestic animals.");}
+
+	
+	public static void main(String[] args) {
+		Animal a1 = new Animal();
+		
+		a1.takecare();
+		a1.giveBirth();
+		// TODO Auto-generated method stub
+
+		
+	}
+
+}
+//Third class
+package InheritanceCharacter;
+
+public class Cat extends Animal {
+public void produce() {
+	System.out.println("Makes mow....sound.");
+}
+	
+	public static void main(String[] args) {
+		Cat c1 = new Cat();
+		c1.produce();//calling own character
+		c1.takecare();// calling animal character
+		c1.giveBirth(); // calling mammals character
+		// TODO Auto-generated method stub
+
+	}
+
+}
